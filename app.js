@@ -8,7 +8,9 @@ const { render } = require('ejs');
 const app = express();
 
 // connect to mongoDB
-const dbURI = ``;
+const dbURI = `${process.env.MONGODB_CONNECTION}`;
+const port = process.env.PORT;
+
 mongoose.connect(dbURI)
     .then(res => app.listen(3000))
     .catch(err => console.log(err));
@@ -18,7 +20,7 @@ mongoose.connect(dbURI)
 app.set('view engine', 'ejs');
 
 // listen for requests
-console.log('http://localhost:3000');
+console.log('http://localhost:' + port);
 
 // middleware & static files
 app.use(express.static('public'));
