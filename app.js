@@ -4,12 +4,13 @@ const mongoose = require('mongoose');
 const Blog = require('./models/blog');
 const { render } = require('ejs');
 
+
 // express function
 const app = express();
 
 // connect to mongoDB
-const dbURI = `${process.env.MONGODB_CONNECTION}`;
-const port = process.env.PORT;
+const dbURI = ``;
+const port = 3000;
 
 mongoose.connect(dbURI)
     .then(res => app.listen(3000))
