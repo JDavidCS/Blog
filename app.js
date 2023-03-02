@@ -8,7 +8,7 @@ const { render } = require('ejs');
 const app = express();
 
 // connect to mongoDB
-const dbURI = 'mongodb+srv://Admin:DB2022@nodeproyect.mbfcxhb.mongodb.net/Node-Proyect?retryWrites=true&w=majority';
+const dbURI = ``;
 mongoose.connect(dbURI)
     .then(res => app.listen(3000))
     .catch(err => console.log(err));
@@ -56,7 +56,6 @@ app.post('/blogs', (req, res) => {
 });
 
 app.get('/blogs/create', (req, res) => {
-    console.log('----------****************____________||||||||||');
     res.render('create', {title: 'New Blog'});
 });
 

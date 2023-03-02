@@ -23,6 +23,9 @@ a{
 h1, h2, a:hover{
     color: var(--main-color);
 }
+a{
+    cursor: pointer;
+}
 h2{
     font-size: 3rem;
 }
@@ -62,8 +65,9 @@ nav a{
 /* ------Content------ */
 .content{
     position: relative;
-    display: block;
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
     margin: auto;
     padding: 10px 10px;
     background-color: var(--bg-main);
@@ -96,6 +100,25 @@ footer{
     color: var(--txt-2-color);
     margin: 0;
     padding-top: 5px;
+}
+.content h2{
+    margin-left: 20px;
+}
+.delete{
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    color: #fff;
+    margin: 20px auto;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: none;
+    width: max-content;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+.delete:hover{
+    color: #fff;
 }
 /* -----Form----- */
 .create-blog{
